@@ -129,7 +129,8 @@
             transition: transform 0.3s ease;
             border-radius: 8px;
             max-width: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            max-height: 600px;
         }
 
         .photo:hover {
@@ -137,14 +138,14 @@
         }
 
         .photo.rotate-90 {
-            width: auto;
-            max-width: 100%;
-            height: auto;
+            width: 80vw;
+            height: 80vw;
+            max-width: 400px;
             max-height: 400px;
             object-fit: contain;
             transform-origin: center;
             transform: rotate(90deg);
-            margin: 100px auto;
+            margin: 40px auto;
         }
 
         .caption {
@@ -190,13 +191,15 @@
             }
 
             .photo {
-                margin: 15px 0;
+                max-height: 400px;
             }
 
             .photo.rotate-90 {
-                max-height: 200px;
-                margin: 100px auto;
-                width: auto;
+                width: 90vw;
+                height: 90vw;
+                max-width: 300px;
+                max-height: 300px;
+                margin: 45vw auto;
             }
 
             .caption {
@@ -226,10 +229,16 @@
                 padding-bottom: 8px;
             }
 
+            .photo {
+                max-height: 300px;
+            }
+
             .photo.rotate-90 {
-                max-height: 150px;
-                margin: 75px auto;
-                width: auto;
+                width: 90vw;
+                height: 90vw;
+                max-width: 250px;
+                max-height: 250px;
+                margin: 45vw auto;
             }
 
             .journal-text {

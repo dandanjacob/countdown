@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gazeta dos Enamorados</title>
+
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background-color: #fdf6e3;
+            color: #111;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #f8f1dc;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #c2b280;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .navbar a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            background-color: #c2b280;
+            color: #2c3e50;
+        }
+
+        .journal-container {
+            margin-top: 80px;
+            /* Add margin to account for fixed navbar */
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f8f1dc;
+            border: 1px solid #c2b280;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .journal-page {
+            margin-bottom: 60px;
+            padding: 40px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #111;
+            padding-bottom: 10px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        h2::first-letter {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .date {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            font-style: italic;
+        }
+
+        .columns-2 {
+            display: flex;
+            gap: 40px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .columns-3 {
+            column-count: 3;
+            column-gap: 40px;
+            text-align: justify;
+        }
+
+        .journal-text {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .photo {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            display: block;
+            border: 1px solid #ccc;
+            transition: transform 0.3s ease;
+        }
+
+        .photo:hover {
+            transform: scale(1.02);
+        }
+
+        .photo.rotate-90 {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            transform-origin: center;
+            transform: rotate(90deg);
+            margin: 100px 0;
+        }
+
+        .caption {
+            font-size: 0.95em;
+            font-style: italic;
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .columns-2 {
+                flex-direction: column;
+            }
+
+            .columns-3 {
+                column-count: 1;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html">Contagem</a>
+            <a href="places.html" class="active">Lugares</a>
+            <a href="proposal.html">Surpresa ♡</a>
+        </div>
+    </nav>
+
+    <div class="journal-container">
+        <!-- Primeira página -->
+        <article class="journal-page">
+            <h2>Após recuperação de momento trágico de desmaio de Daniel, o casal aprovitou o domingo em um pesque e
+                pague com companhias leves e sem agulhas</h2>
+            <div class="date">20 de Abril de 2025</div>
+
+            <div class="columns-2">
+                <div class="column">
+                    <img src="images/1.jpg" />
+                    <div class="caption">Quem fica mal com um sorriso desses?</div>
+                    <p class="journal-text">
+                        O final de semana de Páscoa reservou momentos intensos para o casal. Na sexta-feira, dia 18,
+                        após desfrutarem das relaxantes águas quentes de Caldas Novas, um imprevisto mudaria os planos
+                        do casal: Daniel foi diagnosticado com pneumonia.
+                    </p>
+                    <p class="journal-text">
+                        O dia seguinte trouxe ainda mais tensão quando, durante uma visita ao posto de saúde da cidade,
+                        Daniel teve um episódio de desmaio. Entre doses de dipirona e momentos de apreensão, o maior
+                        desafio foi enfrentar uma agulha - e não era uma agulha qualquer, era uma bem grande.
+                    </p>
+                </div>
+                <div class="column">
+                    <p class="journal-text">
+                        Felizmente, após sinais de melhora do paciente, o casal não deixou o contratempo abalar
+                        completamente o final de semana. Decidiram aproveitar o domingo em um ambiente descontraído:
+                        um pesque e pague. Na companhia das amigas Carol e Nath, o grupo desfrutou de momentos
+                        leves e risadas. Daniel, seguindo as recomendações médicas, manteve-se longe de qualquer
+                        bebida alcoólica, mas não economizou nos sorrisos.
+                    </p>
+                    <img src="images/pesque-pague2.jpeg" alt="Special moment" class="photo rotate-90" />
+                    <div class="caption">Boa companhia s2</div>
+                    <p class="journal-text">
+                        O episódio, que inicialmente assustou a todos, transformou-se em mais uma história para o
+                        acervo do casal, provando que, mesmo nos momentos mais desafiadores, o amor e o bom humor
+                        prevalecem.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Segunda página -->
+        <article class="journal-page">
+            <h2>Mesmo depois de momentos fofos, namorado é ameaçado de morte após deixar namorado com fome por mais
+                tempo do que deveria. Resultado? Cara fechada e urgência no preparo do Subway</h2>
+            <div class="date">23 de Maio de 2025</div>
+
+            <div class="columns-3">
+                <p class="journal-text">
+                    Passeios diversos marcaram o segundo encontro do casal, e foi tudo muito fofo até o momento em que
+                    se tocaram: hora do almoço e nada por perto pra comer. Ambos pegaram o uber até o Shopping e
+                    atacaram o que havia de mais rápido pro preparo: Subway. Marcos pediu molho. Muito molho. Era molho
+                    com pão. Na verdade pensando bem era molho
+                    com pão. Só tinha molho. Como consequência, uma cara lambusada foi motivo de algumas risadas.
+                </p>
+                <img src="images/pao-de-acucar1.jpg" alt="Beautiful sunset" class="photo" />
+                <div class="caption">Sol, mar e promessas ao vento</div>
+                <img src="images/9.jpg" alt="Our first trip" class="photo" />
+                <div class="caption">Pré pedido no Subway</div>
+
+                <p class="journal-text">
+                    O casal terminou o almoço e rapidamente partiram para o próximo lugar de destino, o Pão de Açúcar.
+
+                <p class="journal-text">
+                    Em um pôr do sol digno de cinema, mãos se entrelaçaram e promessas foram sussurradas ao
+                    vento. Eles
+                    caminharam pela praia como se fossem os únicos no mundo. Segundo relatos, um caranguejo se
+                    emocionou.
+                </p>
+
+
+                <p class="journal-text">
+                    O retorno foi marcado por saudade antecipada. Os registros fotográficos, no entanto, ainda
+                    provocam
+                    suspiros — tanto deles quanto de quem os viu. O amor floresce nas pequenas escapadas.
+                </p>
+
+                <img src="images/10.jpg" alt="Special moment" class="photo" />
+                <div class="caption">Final do dia, final de semana</div>
+
+                <p class="journal-text">
+                    A experiência inaugurou uma tradição: todo fim de ano, uma nova jornada. O destino pode
+                    mudar, mas a
+                    companhia permanece a mesma.
+                </p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
